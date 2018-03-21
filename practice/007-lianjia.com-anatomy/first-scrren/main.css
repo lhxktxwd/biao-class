@@ -1,0 +1,99 @@
+.first-screen {
+    min-height: 640px;
+    background-image: url('./banner.jpg');
+    overflow: auto;
+
+}
+
+.nav {
+    margin-top: 10px;
+}
+
+.nav .col.left {
+    width: 30%;
+}
+
+.nav .col.right {
+    width: 70%;
+}
+
+.nav .person-info {
+    font-size: 70%;
+    font-weight: normal;
+}
+
+.nav a {
+    padding: 2px 10px;
+    color: #eee;
+}
+
+
+.logo {
+    width: 137px;
+    height: 66px;
+}
+
+.stuff {
+    background-color: #dcdcdcee;
+    text-align: center;
+    font-weight: bold;
+}
+
+.logo, .location {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.location {
+    padding: 5px;
+    background: rgba(0, 0, 0, .2);
+    color: #eee;
+    font-size: 65%;
+    border-radius: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.title-group {
+    color: #eee;
+    margin-bottom: 20px;
+}
+
+.search-box{
+    max-width: 485px;
+    margin: 0 auto;
+}
+
+.search-input, .search-btn{
+    padding:13px 15px;
+    /* 解决按钮高度和输入框不一致问题 */
+    line-height: 1.1;
+    border: 0;
+}
+
+.search-input {
+    width: 400px;
+}
+.search-btn {
+    background: #00ae66;
+    color: #fff;
+}
+
+.search-box .type {
+    font-size: .75rem;
+    text-align: left;
+}
+
+.search-box .type > * {
+    color: rgba(255, 255, 255, .4);
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.search-box .type > *.active {
+    color: #fff;
+}
