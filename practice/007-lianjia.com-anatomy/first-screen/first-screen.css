@@ -1,5 +1,4 @@
 .first-screen {
-    min-height: 640px;
     background-image: url('./banner.jpg');
     overflow: auto;
 
@@ -23,7 +22,8 @@
 }
 
 .nav a {
-    padding: 2px 10px;
+    display: inline-block;
+    padding: 5px 10px;
     color: #eee;
 }
 
@@ -54,11 +54,18 @@
 
 .center {
     text-align: center;
+    margin: 0 auto 140px auto;
 }
 
 .title-group {
     color: #eee;
     margin-bottom: 20px;
+}
+
+.title-group h1 {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 3.8rem;
 }
 
 .search-box{
@@ -69,7 +76,8 @@
 .search-input, .search-btn{
     padding:13px 15px;
     /* 解决按钮高度和输入框不一致问题 */
-    line-height: 1.1;
+    /* line-height: 1.1; */
+    font-size: .8rem;
     border: 0;
 }
 
@@ -89,7 +97,7 @@
 .search-box .type > * {
     color: rgba(255, 255, 255, .4);
     display: inline-block;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
 
 }
@@ -97,3 +105,5 @@
 .search-box .type > *.active {
     color: #fff;
 }
+
+
