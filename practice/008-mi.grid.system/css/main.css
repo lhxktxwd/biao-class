@@ -1,0 +1,88 @@
+.nav {
+    background: #333; 
+}
+
+.nav a {
+    color: #b0b0b0;
+}
+
+.nav a {
+    padding: 10px 10px 10px 0;
+    display: inline-block;
+}
+
+.first-screen a{
+    font-size: 1.1rem;
+}
+
+.first-screen .top a{
+    display: inline-block;
+    color: #333;
+    padding: 19px 10px;
+}
+
+.top {
+    padding: 30px 0
+}
+
+.page {
+    vertical-align: top;
+}
+
+.top .logo {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    background-image: url('../img/mi-logo.png');
+    background-size: cover;
+    background-color: #ff6700;
+}
+
+.search-box {
+    font-size: 0;
+}
+
+.search-input {
+    display: inline-block;
+    padding: 0 10px;
+    width: 223px;
+    height: 48px;
+    line-height: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    outline: 0;
+}
+
+.search-input:focus {
+    border-color: #ff6700;
+}
+
+.search-button {
+    display: inline-block;
+    height: 48px;
+    line-height: 1.1rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-left: 0;
+}
+
+.center {
+    height: 464px;
+    background-image: url('../img/slider.jpg');
+    background-size: cover;
+}
+
+.card-group {
+    padding: 10px 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.card-group a {
+    display: block;
+    padding: 10px 0px 10px 30px;
+    color: #fff;
+}
+
+.card-group a:hover{
+    background-color: #ff6700;
+}
+
+
