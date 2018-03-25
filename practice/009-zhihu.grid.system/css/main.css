@@ -1,0 +1,148 @@
+.top {
+    height: 52px;
+    padding: 10px 0;
+    /* position: fixed; */
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+
+.logo {
+    display: inline-block;
+    fill: #0084ff;
+}
+
+.theme {
+    display: inline-block;
+    vertical-align: middle;
+    vertical-align: top;
+    line-height: 30px;
+    margin-left: 7px;
+}
+
+.theme a {
+    font-size: 1.1rem;
+    color: #8590a6;
+    padding: 0 15px;
+}
+
+.search-box {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.search {
+    width: 326px;
+    height: 24px;
+    outline: none;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    padding: 15px 10px;
+}
+
+.search-btn {
+    display: inline-block;
+    padding: 0 14px;
+    background-color: #0077e6;
+    border: 1px solid #0077e6;;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+    height: 100%;
+    margin-left: 8px;
+}
+
+.btn {
+    font-size: 1.6rem;
+    color: #8590a6;
+    margin-right: 30px;
+    display: inline-block;
+}
+
+.top-img {
+    vertical-align: top;
+    border: none;
+}
+
+.main {
+    margin-top: 10px;
+}
+
+.main-top-nav {
+    width:59%;
+}
+
+.main-top {
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+
+.main-top-nav a,
+.main-top-item a {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 15px 15px;
+}
+
+.main-top-nav a {
+    color: #1a1a1a;
+}
+
+.main-top-item a {
+    color: #8590a6;
+}
+
+.main-top-item {
+    width:40%;
+}
+
+.content-box {
+    margin-top: 10px;
+    padding:10px 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+
+.content-box div {
+    margin-bottom: 10px;
+}
+
+.item-bar a {
+    color: #8590a6;
+    padding-left: 5px;
+}
+
+.like a,.dislike a {
+    color: #0084ff;
+    padding: 4px 10px;
+    background: rgba(0,132,255,.1);
+    border-radius: 8%;
+}
+
+.other {
+    margin-left: 10px;
+}
+
+.other-item {
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+    margin-bottom: 10px;
+}
+
+.other-item a {
+    display: inline-block;
+    width:49%;
+    padding: 20px;
+    color: #8590a6;
+}
+
+.my-info {
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(26,26,26,.1);
+}
+
+.my-info a {
+    display: block;
+    font-size: 1.1rem;
+    color: #8590a6;
+}
