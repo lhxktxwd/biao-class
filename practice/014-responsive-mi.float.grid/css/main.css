@@ -1,0 +1,27 @@
+@media (max-width:500px){
+    .nav {
+        background-color: palegoldenrod;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .search-box {
+        font-size: 0;
+    }
+
+    .search {
+        width: 70%;
+        font-size: 1rem;
+    }
+
+    .btn {
+        width: 30%;
+        font-size: 1rem;
+    }
+
+    .main-promo a {
+        width: 100%;
+    }
+}

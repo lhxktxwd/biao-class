@@ -1,0 +1,38 @@
+@media (max-width:500px) {
+    .head {
+        min-height: 220px;
+        background-position: 45% top;
+    }
+
+    .nav {
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .nav a {
+        padding: 5px;
+    }
+
+    .nav > * {
+        float: left;
+    }
+
+    .main .col-3 {
+        width: 100%;
+    }
+ 
+}
+
+
+@media (min-width: 400px) {
+    .main .col-3 {
+        width: 50%;
+    }
+}
+
+@media (min-width: 600px) {
+    .main .col-3 {
+        width: 25%;
+    }
+}
