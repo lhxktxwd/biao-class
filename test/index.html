@@ -1,27 +1,38 @@
-<style>
-  * {
-    box-sizing: border-box;
-  }
-  .row:before,
-  .row:after {
-    clear: both;
-    content: "";
-    display: block;
-  }
- 
-  .row {
-    background-color: aqua;
-  }
-  .col {
-    float: left;
-    width: 33.33333%;
-    border: 1px solid #444;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+          box-sizing: border-box;
+        }
+        .row {
+          display: block;
+          font-size: 0;
+        }
+       .col {
+         width: 50%;
+         border: 1px solid #444;
+         display: inline-block;
+         font-size: 1rem;
+       }
+       @media (max-width: 500px) {
+         .col{
+           width: 100%;
+           background-color: #444;
+         }
+       }
+      </style>
+      <div class="row">
+        <div class="col">A</div>
+        <div class="col">B</div>
+      </div>
+</body>
+</html>
 
-<div class="row">
-  <div class="col">A</div>
-  <div class="col">B</div>
-  <div class="col">C</div>
-</div>
 
