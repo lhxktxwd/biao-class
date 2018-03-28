@@ -1,0 +1,11 @@
+.nav.global {
+    background-color: #333;
+}
+
+.nav.global a {
+    color: #b0b0b0;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+
