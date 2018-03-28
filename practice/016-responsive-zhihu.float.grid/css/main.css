@@ -1,0 +1,8 @@
+.nav {
+    position: fixed;
+}
+
+.main {
+    position: relative;
+    top: 10px;
+}
