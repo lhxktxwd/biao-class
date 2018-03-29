@@ -1,0 +1,182 @@
+.nav.product {
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.07);
+}
+
+.order-header {
+    height: 64px;
+    line-height: 60px;
+    background: #fff;
+  
+}
+
+.pro_name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    color: #212121;
+}
+
+.order-header a {
+    font-size: 1.2rem;
+    color: #616161;
+}
+
+.product-main {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.product-main img {
+    width: 560px;
+    height: 560px;
+}
+
+.sale-info > .title {
+    color: #212121;
+    font-size: 2rem;
+}
+
+.sale-info >.desc {
+    color: #b0b0b0;
+    font-size: 1.2rem;
+    padding-top: 8px;
+}
+
+.sale-info .pro-price {
+    font-size: 1.5rem;
+    display: block;
+    color: #ff6700;
+    padding: 12px 0 20px;
+}
+
+.active-box .head {
+    background-color: #ff6700;
+    color: #fff;
+    padding: 10px;
+}
+
+.active-box .head > * {
+    font-size: 1.2rem;
+}
+
+.active-info {
+    font-size: 2rem;
+    color: #ff6700;
+    padding: 20px 0 10px 20px;
+}
+
+.sale-info .address {
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sale-info .address > * {
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.pro-choose {
+    font-size: 0;
+    margin-bottom: 30px;
+}
+
+.pro-choose .title {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.choose-item {
+    font-size: 0;
+    border: 1px solid #e0e0e0;
+    line-height: 42px;
+    height: 42px;
+    margin-left: 6px;
+    margin-top: 15px;
+    width: 298px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.choose-item.active {
+    border: 1px solid #ff6700;
+   
+}
+
+.choose-item.active .name,
+.choose-item.active .cen-name {
+    color: #ff6700;
+}
+
+.choose-item .name,
+.choose-item .price {
+    display: inline-block;
+    width: 50%;
+    font-size: 1.4rem;
+}
+
+.choose-item .cen-name {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+.choose-item .price {
+    display: inline-block;
+    color: #757575;
+    font-size: 1.4rem;
+}
+
+.pro-service .title {
+    padding: 10px;
+}
+
+.service-info {
+    border: 1px solid #e0e0e0;
+    padding: 30px 0 20px 100px;
+}
+
+
+.service-info .title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.service-info .desc {
+    margin-bottom: 10px;
+    color: #b0b0b0;
+    font-size: 1.2rem;
+}
+
+.service-info .agreement > * {
+    font-size: 1.2rem;
+}
+
+.price-info {
+    padding: 30px;
+}
+
+.price-info > * {
+    font-size: 1.2rem;
+}
+
+.price-info .sum {
+    padding-top: 30px;
+    font-size: 2rem;
+    color: #ff6700;
+}
+
+.pro-btn {
+    width: 298px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 1.3rem;
+    color: #fff;
+    background-color: #ff6700;
+    border: 1px solid rgba(0, 0, 0, .1);
+    outline: 0;
+}
