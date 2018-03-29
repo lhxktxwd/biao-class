@@ -1,0 +1,108 @@
+.category {
+    background: rgba(0,0,0,0.6);
+    padding: 20px 0;
+}
+
+.main-promo {
+    background-image: url('../../img/slider.jpg');
+}
+
+.main-promo a {
+    width: 100%;
+    height: 42px;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 1.2rem;
+    line-height: 42px;
+}
+
+.main-promo a:hover {
+    background-color: #ff6700;
+}
+
+.sub-promo {
+    padding: 14px 0;
+}
+
+.channel {
+    font-size: 0;
+    display: inline-block;
+    background: #5f5750;
+    text-align: center;
+}
+
+.channel a {
+    color: rgba(255,255,255,0.7);
+    padding-top:18px;
+    height: 82px;
+}
+
+.sub-promo .card-group {
+    font-size: 0;
+    display: inline-block;
+}
+
+.sub-promo .card {
+    padding-left: 14px;
+}
+
+.sub-promo .card img {
+    width: 100%;;
+    height: 164px;
+}
+
+.promo-head {
+    height: 58px;
+}
+
+.promo-head .title {
+    font-size: 1.9rem;
+    color: #333;
+    font-weight: 200;
+    line-height: 58px;
+}
+
+.promo-head .more {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 58px;
+}
+
+.promo-item-lg img{
+    width: 100%;
+    height: 600px;
+}
+
+.promo-group {
+    font-size: 0;
+}
+
+.promo-item {
+    padding-left: 14px;
+    padding-bottom: 14px;
+    height: 300px;
+    text-align: center;
+}
+
+.promo-item .title,
+.promo-item .desc,
+.promo-item .price {
+    display: block;
+    padding:5px 0;
+}
+.promo-item .title {
+    font-size: 1.2rem;
+}
+
+.promo-item .desc {
+    color: #b0b0b0;
+}
+
+.promo-item .price {
+    color: #ff6700;
+    font-size: 1.2rem;
+}
+
+.promo-item img {
+    height: 160px;
+}

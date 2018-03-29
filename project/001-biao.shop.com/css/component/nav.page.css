@@ -4,10 +4,11 @@
     height: 55px;
     background-color: #ff6700;
     display: inline-block;
+    background-size: cover;
 }
 
 .nav.page {
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 .nav.page a {
