@@ -1,0 +1,95 @@
+.nav .logo {
+    background-image: url('../../img/mistore_logo.png');
+    width: 200px;
+    height: 98px;
+}
+
+.body {
+    background-image: url('../../img/login-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: right;
+}
+
+.form {
+    min-height: 524px;
+    background-color: #fff;
+    padding: 30px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.form .title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.form .title a {
+    font-size: 2rem;
+    color: #666;
+    display: inline-block;
+}
+
+.line {
+    width: 1px;
+    height: 24px;
+    margin: 0 35px 0 42px;
+    border: 1px solid #e0e0e0;
+}
+
+.form input {
+    margin-top: 15px;
+    padding: 13px;
+    border: 1px solid #e0e0e0;
+    font-size: 1.2rem;
+}
+
+.form .btn {
+    background-color: #ef5b00;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: #fff;
+    margin-top:10px;
+    padding: 15px 10px;;
+    font-size: 1.2rem;
+}
+
+.register {
+    padding: 10px;
+    font-size: 0;
+}
+
+.register a,
+.register span {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.footer {
+    margin-top: 150px;
+    text-align: center;
+}
+.text {
+    color: #999;
+    font-size: 1.2rem
+}
+
+.share-group {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.share-qq {
+    display: inline-block;
+    background-color: #757575;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.share-qq a{
+    background-image: url("../../img/share.png");
+    background-position: -19px 0;
+    width: 18px;
+    height: 18px;
+   
+}

@@ -16,6 +16,10 @@ form {
     margin: 0;
 }
 
+.active {
+    color: #ef5b00!important;
+}
+
 .container {
     max-width: 1226px;
     margin-left: auto;
