@@ -1,0 +1,44 @@
+.check-group {
+    padding-left: 27px;
+    position: relative;
+}
+
+.check-group input{
+    width: 1px;
+    height: 1px;
+    border: 0;
+    opacity: 0;
+}
+
+.check-group label:before {
+    content: '';
+    display: inline-block;
+    border: 1px solid #e5e5e5;
+    border-radius: 2px;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+}
+
+.check-group label {
+    margin-left: -5px;
+}
+
+.check-group input:checked+label:after {
+    position: absolute;
+    transform: rotate(-45deg);
+    content: '';
+    border-width: 0px 0px 2px 2px !important;
+    height: 3px;
+    width: 6px;
+    border: solid #111;
+    margin: 9px 0 0 4px;
+    left: 0;
+    top: 0;
+}
+
+label {
+    cursor: pointer;
+}
