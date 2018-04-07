@@ -1,0 +1,181 @@
+html {
+    font-size: 13px;
+}
+
+body {
+    background-color: #fff;
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0.0625rem 0.1875rem 0 rgba(0,34,77,.1);
+    z-index: 1;
+}
+
+.right {
+    text-align: right;
+}
+
+.nav a {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.nav a:hover,
+.card .desc a:hover,
+.card .title:hover {
+    color: #0366d6!important;
+    background-color: #fff;
+}
+
+.nav from {
+    border-radius: 2px;
+    display: inline-block;
+    border: 1px solid #e5e6e7;
+}
+
+.inpu-box {
+    font-size: 0;
+    display: inline-block;
+   
+}
+
+.inpu-box .search-text,
+.inpu-box .search-btn {
+    font-size: 1rem;
+    outline: 0;
+    padding: 10px;
+    line-height: 1.1;
+    border: 0;
+}
+
+.inpu-box .search-btn {
+    background-color: #fff;
+    border-left: 0;
+}
+
+.main {
+    position: relative;
+    top:60px;
+}
+
+.active {
+    color: #0366d6!important;
+}
+
+.card {
+    border-bottom: 1px solid #ececec;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 0;
+}
+
+.card .tag:hover,
+.hot-tag .content a:hover {
+    background-color: #0366d6;
+    color: #fff;
+}
+
+.card .content {
+    padding-left:20px;
+    vertical-align: top;
+}
+
+.card .content > div {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.card .title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.card > * {
+    font-size: 1rem;
+}
+
+.card .img img{
+    width: 100%;
+    height: 100px;
+}
+
+.card .tag {
+    background: #f1f8ff;
+    color: #0366d6;
+    padding: 5px 10px;
+}
+
+.user-info img {
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+}
+
+.user-info .desc {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.user-info .desc > * {
+    vertical-align: middle;
+    line-height: 1.8;
+    color: #888;
+}
+
+.user-info .desc > *:after {
+    content: '|';
+    margin: 0 5px;
+    color: #e4dede;
+}
+
+.user-info .desc > *:last-child:after {
+    content: '';
+}
+
+.other {
+    position: absolute;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.hot-tag .content {
+    padding: 10px 0;
+}
+
+.hot-tag .title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.hot-tag .title span {
+    padding-left: 15px;
+}
+
+.hot-tag .title:before {
+    content: '';
+    width: 5px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    background: #0366d6;
+}
+
+
+.hot-tag a {
+    color: #0366d6;
+    padding: 5px 10px;
+    margin: 5px 0;
+    background-color: #f1f8ff;
+}
