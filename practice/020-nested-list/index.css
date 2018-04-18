@@ -1,0 +1,15 @@
+li {
+    cursor: pointer;
+}
+
+li:hover {
+    font-weight: bold;
+}
+
+ul {
+    font-weight: normal;
+}
+
+ul,li {
+    list-style:none;
+}
