@@ -1,0 +1,39 @@
+<form id="seachForm">
+    <input type="seach" id="searchInput" placeholder="please input search content">
+    <button type="submit">search</button>
+</form>
+
+<div id="info"></div>
+
+<script>
+
+    init();
+
+    function init(){
+        var $seachForm = document.querySelector('#seachForm');
+        var $searchInput = document.querySelector('#searchInput');
+
+        $seachForm.addEventListener('submit',function(e){
+            e.preventDefault();
+            var username = $searchInput.value;
+            myAjax('https://api.github.com/users/'+username,render)
+        });
+    }
+
+    function render(data){
+       var $info = document.querySelector('#info');
+       $info.innerHTML = `avatar:<img src="${data.avatar_url}"> </br> login:${data.login}`;
+    }
+
+    function myAjax(url,fn,method){
+        method = method||'GET'
+        var http = new XMLHttpRequest();
+        http.addEventListener('load',function(){
+            var data = this.responseText;
+            fn(JSON.parse(data));
+        });
+        http.open(method,url)
+        http.send();
+    }
+
+</script>
