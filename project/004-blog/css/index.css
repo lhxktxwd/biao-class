@@ -2,7 +2,7 @@
 .nav {
     position: fixed;
     width: 100%;
-    background-color: #3367d6;
+    background-color: #fafafa;
     z-index: 1;
 }
 
@@ -11,17 +11,19 @@
 }
 
 .nav a{
-    padding: 20px;
-    font-size: 1.2rem;
-    color: #fff;
+    padding: 15px;
+    color: rgba(0,0,0,0.55);
 }
 
-.nav a.active,
-.nav a:hover,
-.card .desc a:hover,
-.card .title:hover {
-    color: #0366d6!important;
-    background-color: #fff;
+.nav a:hover {
+    color: #000;
+    border-bottom: 2px solid #c4c4c4;
+}
+
+.nav a.active {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid #4a8bee;
 }
 
 .nav from {
@@ -40,7 +42,7 @@
 .inpu-box .search-btn {
     font-size: 1rem;
     outline: 0;
-    padding: 10px;
+    padding: 7px;
     line-height: 1.1;
     border: 0;
 }
@@ -52,7 +54,7 @@
 
 .main {
     position: relative;
-    top:60px;
+    top:46px;
     margin-bottom: 10px;
 }
 
@@ -60,11 +62,22 @@
     color: #0366d6!important;
 }
 
+.main .content-area {
+    min-height: 893px;
+}
+
 .card {
     border-bottom: 1px solid #ececec;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 0;
+}
+
+.card:hover {
+    background-color: #f7faff;
+    border-top: 1px solid #b2d7ff;
+    border-bottom: 1px solid #b2d7ff;
+    cursor: pointer;
 }
 
 .hot-tag .content a:hover {
@@ -73,7 +86,6 @@
 }
 
 .card .content {
-    height: 100px;
     padding-left:20px;
     vertical-align: top;
 }
@@ -84,10 +96,13 @@
 }
 
 .card .title {
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.2rem;
+    font-weight: 600;
     display: inline-block;
-    cursor: pointer;
+}
+
+.card .desc a:hover {
+    text-decoration: underline;
 }
 
 .card > * {
@@ -165,7 +180,8 @@
 .footer {
     text-align: center;
     position: relative;
-    top:60px;
+    padding: 0 20px;
+    top:30px;
 }
 
 .footer:before {
