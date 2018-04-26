@@ -142,9 +142,8 @@
 }
 
 .other {
-    position: absolute;
+    vertical-align: top;
     padding: 10px;
-    margin-left: 10px;
 }
 
 .hot-tag .content {
