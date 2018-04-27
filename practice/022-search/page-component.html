@@ -1,0 +1,69 @@
+<div id="app">
+
+</div>
+
+<style>
+    .btn {
+        border: none;
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #333;
+    }
+
+    .active {
+        border-color: aqua;
+    }
+</style>
+
+<script>
+    var total = 21 ,maxPage = 5 , currentNum = 1;
+
+   
+    render_page_component();
+
+    function render_page_component(){
+
+        var renderEl = document.querySelector('#app');
+
+        renderEl.innerHTML = '';
+
+        var start,end,median = Math.ceil(maxPage/2);
+
+        if(currentNum <= median){
+            start = 1;
+            end = maxPage;
+        }else if (currentNum > total - median) {
+            start = total - maxPage + 1;
+            end = total;
+        }else{
+            start = currentNum - median + 1;
+            end = currentNum + median -1;
+        }
+
+        for (var index = start; index <= end; index++) {
+            
+            var btnEl = document.createElement('button');
+            
+            btnEl.innerText = index;
+
+            btnEl.classList.add('btn');
+            
+            if(index == currentNum){
+                btnEl.classList.add('active');
+            }
+
+            btnEl.addEventListener('click',bind_index_callbackFun(index));
+
+            renderEl.appendChild(btnEl);
+
+        }
+
+        function bind_index_callbackFun(index) {
+            return function (){
+                console.log(index)
+                currentNum = index;
+                render_page_component();
+            }
+        }
+    }
+</script>
