@@ -23,7 +23,9 @@
 }
 
 .check-group label {
-    margin-left: -5px;
+    margin: 0 -5px;
+    position: static;
+    font-weight: normal;
 }
 
 .check-group input:checked+label:after {
@@ -39,6 +41,6 @@
     top: 0;
 }
 
-label {
+.check-group label {
     cursor: pointer;
 }
