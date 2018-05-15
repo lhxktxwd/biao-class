@@ -1,0 +1,25 @@
+.user-list {
+    font-size: 0;
+}
+
+.user-box {
+    border:1px solid rgb(134, 134, 134);
+    display: inline-block;
+    width: 150px;
+    height: 175px;
+    margin: 4px 14px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.user-box .avatar img{
+    height: 150px;
+    width: 148px;
+    cursor: pointer;
+}
+
+.user-info .user-title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+}

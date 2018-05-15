@@ -1,0 +1,12 @@
+{
+  "name": "049-github-search-rewrite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack -wd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
