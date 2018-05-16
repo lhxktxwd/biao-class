@@ -1,0 +1,12 @@
+{
+  "name": "026-todo-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -wd"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
