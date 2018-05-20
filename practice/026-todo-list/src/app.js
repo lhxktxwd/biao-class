@@ -1,8 +1,5 @@
-var todoModel = require('./todoModel');
+var todoApi = require('./todoApi');
+var todoUi= require('./todoUi');//ui模型
+var todo = new todoUi('#todoForm','#todoList');//数据模型
 
-var todo = new todoModel();
-
-// todo.add('test');
-// todo.update(1,'test2');
-// todo.remove(1);
-// console.log(todo.read(1));
+todo.init();

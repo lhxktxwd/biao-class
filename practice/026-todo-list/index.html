@@ -1,1 +1,88 @@
+<style>
+    body {
+        margin: 0;
+    }
+
+    button {
+        cursor: pointer;
+        outline: none;
+    }
+
+    .row {
+        font-size: 0;
+    }
+
+    .col {
+        display: inline-block;
+        font-size: 1rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        max-width: 600px;
+        background-color: #eee;
+        padding: 10px;
+    }
+
+    .todo-form input,
+    .todo-form button {
+        border: 1px solid #eee;
+        padding: 10px;
+    }
+
+    .todo-form input {
+        outline: none;
+        width: 80%;
+    }
+
+    .todo-form button {
+        background-color: #9398a9;
+        width: 20%;
+        border-left: 0;
+    }
+
+    .todo-item {
+        margin-top: 10px;
+    }
+
+    .todo-checkbox {
+        width: 5%;
+    }
+
+    .todo-title {
+        width: 65%;
+    }
+
+    .todo-tool {
+        width: 30%;
+        text-align: right;  
+    }
+
+    .todo-tool .remove,
+    .todo-tool .update {
+        border: 1px solid #eee;
+        padding: 5px;
+    }
+
+    .todo-tool .remove {
+        background-color: #ffe4c4;
+    }
+
+    .todo-tool .update {
+        background-color: #ef9b9b;
+    }
+
+</style>
+
+<div class="container">
+    <h1>todo list</h1>
+    <form id="todoForm" class="todo-form row">
+        <input type="hidden" name="id">
+        <input class="col" type="text" name="content" placeholder="请输入">
+        <button class="col">add</button>
+    </form>
+    <div id="todoList" class="todo-list">
+    </div>
+</div>
+
 <script src="./dist/bundle.js"></script>
