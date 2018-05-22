@@ -1,4 +1,8 @@
 <style>
+    html *{
+        box-sizing: border-box;
+    }
+
     body {
         margin: 0;
     }
@@ -8,12 +12,23 @@
         outline: none;
     }
 
+    .block {
+        display: block;
+        width: 100%;
+    }
+
+    input, button {
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, .1);
+}
+
     .row {
         font-size: 0;
     }
 
     .col {
         display: inline-block;
+        vertical-align: top;
         font-size: 1rem;
     }
 
@@ -22,6 +37,14 @@
         max-width: 600px;
         background-color: #eee;
         padding: 10px;
+    }
+
+    .todo-sidebar {
+        width: 30%;
+    }
+
+    .main {
+        width: 70%;
     }
 
     .todo-form input,
@@ -53,35 +76,85 @@
         width: 65%;
     }
 
-    .todo-tool {
+    .todo-item .todo-tool {
         width: 30%;
-        text-align: right;  
+        text-align: right;
     }
-
+    
+    .todo-tool .add,
     .todo-tool .remove,
     .todo-tool .update {
         border: 1px solid #eee;
         padding: 5px;
+        font-size: 0.5rem;
+    }
+
+    .todo-tool .add {
+        background-color: #5b86ff;
     }
 
     .todo-tool .remove {
-        background-color: #ffe4c4;
+        background-color: #ef9b9b;
     }
 
     .todo-tool .update {
-        background-color: #ef9b9b;
+        background-color: #ffe4c4;
+    }
+
+    .label-from {
+        margin-bottom: 5px;
+    }
+
+    .label-item {
+        position: relative;
+        padding: 5px;
+    }
+
+    .label-item .todo-tool {
+        position: absolute;
+        display: inline-block;
+        right: 5px;
+        top: 0;
+    }
+
+    .label-item input[disabled] {
+        border: 0;
+        background: transparent;
+        padding: 5px;
+    }
+
+    .label-addbtn {
+        background: #fff;
+        text-align: center;
+        cursor: pointer;
     }
 
 </style>
 
 <div class="container">
     <h1>todo list</h1>
-    <form id="todoForm" class="todo-form row">
-        <input type="hidden" name="id">
-        <input class="col" type="text" name="content" placeholder="请输入">
-        <button class="col">add</button>
-    </form>
-    <div id="todoList" class="todo-list">
+    <div class="row">
+        <div class="todo-sidebar col">
+            <div class="title">标签</div>
+            <div id="labelList" class="label-list"></div>
+            <form id="labelFrom" class="label-from row" hidden>
+                <input class="block" type="text" name="content" autocomplete="off">
+                <div class="todo-tool col">
+                    <button class="add" type="submit">完成</button>
+                    <button class="remove" type="button" data-action="cancel">取消</button>
+                </div>
+            </form>
+            <div id="labelAdd" class="label-addbtn">+</div>
+        </div>
+        <div class="main col">
+            <form id="todoForm" class="todo-form row">
+                <input type="hidden" name="id">
+                <input class="col" type="text" name="content" placeholder="请输入" autocomplete="off">
+                <button class="col">add</button>
+            </form>
+            <div id="todoList" class="todo-list">
+            </div>
+        </div>
     </div>
 </div>
 

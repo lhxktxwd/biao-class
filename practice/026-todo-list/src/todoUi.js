@@ -1,28 +1,27 @@
 var TodoModelApi = require('./todoApi');
+var util = require('./getOrSetFromDataUtil');
 
 function TodoUi(from_id,list_id) {
     this.el_from = document.querySelector(from_id);
     this.el_list = document.querySelector(list_id);
     this._api = new TodoModelApi();
+    this._util = new util(this.el_from);
     this.data = {};
 };
 
 TodoUi.prototype.init = init;
-TodoUi.prototype.getFromData = getFromData;
-TodoUi.prototype.setFromData = setFromData;
-TodoUi.prototype.detect_add = detect_add;
+TodoUi.prototype.detect_addOrUpdate = detect_addOrUpdate;
 TodoUi.prototype.detect_click = detect_click;
 TodoUi.prototype.render = render;
-TodoUi.prototype.clear = clear;
 
 function init(){
-    this.detect_add();
     this.render();
     this.detect_click();
+    this.detect_addOrUpdate();
 }
 
-//监听添加事件
-function detect_add() {
+//监听添加或修改事件
+function detect_addOrUpdate() {
     var that = this;
     var add_data = {};
     this.el_from.addEventListener('submit',function(e){
@@ -38,7 +37,7 @@ function detect_add() {
         }else{
             that._api.add(add_data['content']);
         }
-        that.clear();
+        that._util.clear();
         that.render();
     });
 }
@@ -62,44 +61,9 @@ function detect_click() {
                 /*通过id得到相对应的那条数据对象 {id: xxx, title: '吃饭', ... }*/
                 var item_data = that._api.read(id);
                 /*填充表单*/
-                that.setFromData(item_data);
+                that._util.setFromData(item_data);
             }
     });
-}
-
-//清除输入框内容
-function clear(){
-    var list = this.el_from.querySelectorAll('[name]');
-    list.forEach(input => {
-        input.value = '';
-    });
-}
-
-//获取from数据-- 用于添加事件
-function getFromData() {
-    var data = {};
-    e.preventDefault();
-    var list = el_from.querySelectorAll('[name]');
-    list.forEach(input => {
-        var key = input.name;
-        var value = input.value;
-        data[key] = value;
-    });
-    return data;
-}
-
-//填充from数据-- 用于修改事件
-function setFromData(data) {
-    for (var key in data) {
-        var value = data[key];
-        var el = this.el_from.querySelector(`[name=${key}]`);
-        if(!el)continue;
-        if(typeof value == 'boolean'){
-            el.checked = value;
-        }else{
-            el.value = value;
-        }
-    }
 }
 
 //渲染数据
