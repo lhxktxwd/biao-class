@@ -1,6 +1,6 @@
 function todoLabelApi(max_id,list){
     this.max_id = max_id || 2;
-    this.list = list || [{id:1,content:'嘿嘿'},{id:2,content:'hahas'}];
+    this.list = list || [{id:1,content:'嘿嘿',label:1},{id:2,content:'hahas',label:2}];
 }
 
 todoLabelApi.prototype.add = add;

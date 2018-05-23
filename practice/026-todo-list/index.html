@@ -85,7 +85,7 @@
     .todo-tool .remove,
     .todo-tool .update {
         border: 1px solid #eee;
-        padding: 5px;
+        padding: 8px;
         font-size: 0.5rem;
     }
 
@@ -101,28 +101,37 @@
         background-color: #ffe4c4;
     }
 
+    .label-from {
+        margin-top: 5px;
+    }
+
     .label-item {
         position: relative;
-        padding: 5px;
+        padding: 8px;
+    }
+
+    .label-item.active,
+    .label-item:hover {
+        background-color: #d6d6d6;
+    }
+
+    .label-item .title {
+        font-size: 0.5rem;
+        cursor: pointer;
     }
 
     .label-item .todo-tool {
         position: absolute;
         display: inline-block;
-        right: 5px;
+        right: 0px;
         top: 0;
-    }
-
-    .label-item input[disabled] {
-        border: 0;
-        background: transparent;
-        padding: 5px;
     }
 
     .label-addbtn {
         background: #fff;
         text-align: center;
         cursor: pointer;
+        margin-top: 5px;
     }
 
 </style>

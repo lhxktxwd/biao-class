@@ -16,11 +16,13 @@ todoLabelUi.prototype.show_add_from = show_add_from;
 todoLabelUi.prototype.hidden_add_from = hidden_add_from;
 todoLabelUi.prototype.render = render;
 todoLabelUi.prototype.reset_from_position = reset_from_position;
+todoLabelUi.prototype.label_selected = label_selected;
 
-function init(){
+function init(todoSetfilter_fn){
     this.detect_from_event();
     this.detect_add_click();
     this.render();
+    this.todoSetfilter_fn = todoSetfilter_fn;
 }
 
 function detect_from_event(){
@@ -61,14 +63,24 @@ function detect_from_event(){
             that._api.remove(id);
             that.hidden_add_from();
             that.render();
-        }
-        if(is_update_btn){
+        }else if(is_update_btn){
             that.show_add_from();
             var item = that._api.read(id);
             that._util.setFormData(that.el_form,item);
             label_item.insertAdjacentElement('afterend',that.el_form);
+        }else{
+            that.label_selected(label_item);
         }
     });
+}
+
+function label_selected(label_item){
+    var el_childen = this.el_list.children;
+    for(var i = 0;i<el_childen.length;i++){
+        el_childen[i].classList.remove('active');
+    }
+    label_item.classList.add('active');
+    this.todoSetfilter_fn({'label':label_item.dataset.id});
 }
 
 function detect_add_click(){
@@ -92,9 +104,6 @@ function reset_from_position(){
     this._util.clear(this.el_form);
 }
 
-/**
- * 渲染分组列表
- * */
 function render() {
     /*先拿到分类列表数据*/
     var labelList = this._api.list;
@@ -102,13 +111,13 @@ function render() {
     /*清空上次渲染*/
     this.el_list.innerHTML = '';
     /*通过循环分类数据生成每一条分类元素*/
-    labelList.forEach(function (row) {
+    labelList.forEach(function (item) {
       var el = document.createElement('div'); // 创建元素
       el.classList.add('label-item', 'row'); // 加类
-      el.dataset.id = row.id; // 将id存到元素上，方便后面调用
+      el.dataset.id = item.id; // 将id存到元素上，方便后面调用
       el.innerHTML = `
-      <div class="input">
-          <input type="text" value="${row.content}" disabled>
+      <div class="title">
+          <div>${item.content}</div>
       </div>
       <div class="todo-tool">
         <button class="update">更新</button>
