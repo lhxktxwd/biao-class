@@ -1,6 +1,6 @@
 function TodoModel(todoList,maxId){
     this.maxId = maxId || 0;
-    this.todoList = todoList || [];
+    this.todoList = todoList || [{id:1,content:'嘿嘿',label:1},{id:2,content:'嘿嘿222',label:2}];
 }
 
 //增加数据

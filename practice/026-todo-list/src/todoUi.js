@@ -7,12 +7,15 @@ function TodoUi(from_id,list_id) {
     this._api = new TodoModelApi();
     this._util = new Util();
     this.data = {};
+    this.filter = null;
 };
 
 TodoUi.prototype.init = init;
 TodoUi.prototype.detect_addOrUpdate = detect_addOrUpdate;
 TodoUi.prototype.detect_click = detect_click;
 TodoUi.prototype.render = render;
+TodoUi.prototype.setfilter = setfilter;
+TodoUi.prototype.filtering = filtering;
 
 function init(){
     this.render();
@@ -71,6 +74,9 @@ function render(){
     var todoList = this._api.todoList;
     var html = '';
     this.el_list.innerHTML = '';
+    if(this.filter){
+        todoList = todoList.filter(this.filtering.bind(this));
+    }
     todoList.forEach(function(item){
         var el = document.createElement('div');
         el.classList.add('row', 'todo-item');
@@ -88,5 +94,22 @@ function render(){
         this.el_list.appendChild(el);
     }.bind(this));
 }
+
+function setfilter(filter){
+    this.filter = filter;
+    this.render();
+};
+
+function filtering(item){
+    var  filter =  this.filter;
+    var flag = true;
+    for (const key in filter) {
+        if(!item[key] || item[key] != filter[key]){
+         flag = false;
+         return false;
+        } 
+    }
+    return flag;
+ }
 
 module.exports = TodoUi;
