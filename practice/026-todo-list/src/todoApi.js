@@ -1,12 +1,11 @@
 function TodoModel(todoList,maxId){
-    this.maxId = maxId || 1;
+    this.maxId = maxId || 0;
     this.todoList = todoList || [];
 }
 
 //增加数据
-TodoModel.prototype.add = function (content){
-    this.todoList.push({id:this.maxId,content:content});
-    this.maxId++;
+TodoModel.prototype.add = function (item){
+    this.todoList.push({id:++this.maxId,content:item.content});
 }
 
 //删除数据
@@ -17,11 +16,10 @@ TodoModel.prototype.remove = function (id){
 }
 
 //修改数据
-TodoModel.prototype.update = function(id,content){
-    var todo_index = this.find_todo_by_id(id);
+TodoModel.prototype.update = function(item){
+    var todo_index = this.find_todo_by_id(item.id);
     if(todo_index == null)return;
-    var todo = this.todoList[todo_index];
-    todo.content = content;
+    this.todoList[todo_index] = item;
 }
 
 //读取数据

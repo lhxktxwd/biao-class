@@ -1,6 +1,6 @@
 function todoLabelApi(max_id,list){
-    this.max_id = max_id || 1;
-    this.list = list || [];
+    this.max_id = max_id || 2;
+    this.list = list || [{id:1,content:'嘿嘿'},{id:2,content:'hahas'}];
 }
 
 todoLabelApi.prototype.add = add;
@@ -12,17 +12,17 @@ todoLabelApi.prototype.findIndex = findIndex;
 
 function add(item) {
     var max_id = this.max_id;
-    item.id = max_id++;
+    item.id = ++max_id;
     this.list.push(item);
     this.max_id = max_id;
 }
 function remove(id) {
     var index = this.list.splice(this.findIndex(id),1);
 }
-function update(id,content) {
-    var index = this.findIndex(id);
+function update(item) {
+    var index = this.findIndex(item.id);
     var list = this.list;
-    list[index] = content;
+    list[index] = item;
 }
 function read(id) {
     if(!id)
@@ -31,10 +31,8 @@ function read(id) {
 }
 
 function findIndex(id){
-   return this.list.forEach(function(item,index){
-        if(item.id = id ){
-            return index;
-        }
+   return this.list.findIndex(function(item,index){
+        return item.id == id 
     });
 }
 

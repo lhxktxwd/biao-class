@@ -1,11 +1,11 @@
 var TodoModelApi = require('./todoApi');
-var util = require('./getOrSetFromDataUtil');
+var Util = require('./getOrSetFormDataUtil');
 
 function TodoUi(from_id,list_id) {
-    this.el_from = document.querySelector(from_id);
+    this.el_form = document.querySelector(from_id);
     this.el_list = document.querySelector(list_id);
     this._api = new TodoModelApi();
-    this._util = new util(this.el_from);
+    this._util = new Util();
     this.data = {};
 };
 
@@ -24,20 +24,20 @@ function init(){
 function detect_addOrUpdate() {
     var that = this;
     var add_data = {};
-    this.el_from.addEventListener('submit',function(e){
+    this.el_form.addEventListener('submit',function(e){
         e.preventDefault();
-        var list = that.el_from.querySelectorAll('[name]');
+        var list = that.el_form.querySelectorAll('[name]');
         list.forEach(input => {
             var key = input.name;
             var value = input.value;
             add_data[key] = value;
         });
         if(add_data['id'] != ''){
-            that._api.update(add_data['id'],add_data['content']);
+            that._api.update(add_data);
         }else{
-            that._api.add(add_data['content']);
+            that._api.add(add_data);
         }
-        that._util.clear();
+        that._util.clear(that.el_form);
         that.render();
     });
 }
@@ -61,7 +61,7 @@ function detect_click() {
                 /*通过id得到相对应的那条数据对象 {id: xxx, title: '吃饭', ... }*/
                 var item_data = that._api.read(id);
                 /*填充表单*/
-                that._util.setFromData(item_data);
+                that._util.setFormData(that.el_form,item_data);
             }
     });
 }

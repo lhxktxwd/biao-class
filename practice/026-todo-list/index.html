@@ -101,10 +101,6 @@
         background-color: #ffe4c4;
     }
 
-    .label-from {
-        margin-bottom: 5px;
-    }
-
     .label-item {
         position: relative;
         padding: 5px;
@@ -138,6 +134,7 @@
             <div class="title">标签</div>
             <div id="labelList" class="label-list"></div>
             <form id="labelFrom" class="label-from row" hidden>
+                <input type="hidden" name="id">
                 <input class="block" type="text" name="content" autocomplete="off">
                 <div class="todo-tool col">
                     <button class="add" type="submit">完成</button>
